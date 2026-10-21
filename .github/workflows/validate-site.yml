@@ -21,6 +21,7 @@ jobs:
           python - <<'PY'
           from html.parser import HTMLParser
           from pathlib import Path
+          import csv
           import sys
 
           root = Path(".")
@@ -52,13 +53,26 @@ jobs:
           csv_files = list(root.rglob("*.csv"))
           for path in csv_files:
               try:
-                  text = path.read_text(encoding="utf-8-sig")
-                  if not text.strip():
-                      errors.append(f"{path}: CSV vazio.")
-                  elif not any("," in line or ";" in line for line in text.splitlines()[:1]):
-                      errors.append(f"{path}: cabeçalho CSV sem delimitador reconhecível.")
-              except (UnicodeDecodeError, OSError) as exc:
-                  errors.append(f"{path}: não foi possível ler CSV: {exc}")
+                  with path.open("r", encoding="utf-8-sig", newline="") as handle:
+                      reader = csv.DictReader(handle)
+                      headers = reader.fieldnames or []
+                      if not headers:
+                          errors.append(f"{path}: CSV sem cabeçalho.")
+                          continue
+                      if len(headers) != len(set(headers)):
+                          errors.append(f"{path}: cabeçalhos duplicados.")
+                      rows = list(reader)
+                      if not rows:
+                          errors.append(f"{path}: CSV sem registros.")
+                      for row_number, row in enumerate(rows, start=2):
+                          if None in row or any(value is None for value in row.values()):
+                              errors.append(f"{path}:{row_number}: número de campos incompatível com o cabeçalho.")
+                          if "year" in row and row["year"] and not row["year"].isdigit():
+                              errors.append(f"{path}:{row_number}: ano inválido: {row['year']}")
+                          if "count" in row and row["count"] and not row["count"].isdigit():
+                              errors.append(f"{path}:{row_number}: contagem inválida: {row['count']}")
+              except (UnicodeDecodeError, OSError, csv.Error) as exc:
+                  errors.append(f"{path}: não foi possível validar CSV: {exc}")
           if errors:
               print("\n".join(errors))
               sys.exit(1)
