@@ -1,0 +1,66 @@
+name: Validar dados e páginas
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+      - name: Validar estrutura HTML e links locais
+        shell: bash
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          import sys
+
+          root = Path(".")
+          errors = []
+          class Checker(HTMLParser):
+              def __init__(self, path):
+                  super().__init__(convert_charrefs=True)
+                  self.path = path
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  for key in ("href", "src"):
+                      value = attrs.get(key, "")
+                      if not value or value.startswith(("#", "http://", "https://", "mailto:", "tel:", "data:", "javascript:")):
+                          continue
+                      target = value.split("#", 1)[0].split("?", 1)[0]
+                      if not target:
+                          continue
+                      candidate = (self.path.parent / target).resolve()
+                      if not candidate.exists():
+                          errors.append(f"{self.path}: link local inexistente: {value}")
+          html_files = list(root.rglob("*.html"))
+          if not html_files:
+              errors.append("Nenhum arquivo HTML encontrado.")
+          for path in html_files:
+              try:
+                  Checker(path).feed(path.read_text(encoding="utf-8"))
+              except (UnicodeDecodeError, OSError) as exc:
+                  errors.append(f"{path}: não foi possível ler HTML: {exc}")
+          csv_files = list(root.rglob("*.csv"))
+          for path in csv_files:
+              try:
+                  text = path.read_text(encoding="utf-8-sig")
+                  if not text.strip():
+                      errors.append(f"{path}: CSV vazio.")
+                  elif not any("," in line or ";" in line for line in text.splitlines()[:1]):
+                      errors.append(f"{path}: cabeçalho CSV sem delimitador reconhecível.")
+              except (UnicodeDecodeError, OSError) as exc:
+                  errors.append(f"{path}: não foi possível ler CSV: {exc}")
+          if errors:
+              print("\n".join(errors))
+              sys.exit(1)
+          print(f"Validação básica concluída: {len(html_files)} HTML(s), {len(csv_files)} CSV(s).")
+          PY
