@@ -4,7 +4,7 @@
 
 O projeto compara a trajetória da educação médica no Brasil e nos Estados Unidos. A unidade deve ser declarada em cada dado: curso, instituição que concede diploma, escola, campus/local de ensino, vaga autorizada, ingressante, graduado ou posição de residência. Esses conceitos não são intercambiáveis.
 
-A série histórica atualmente publicada é de **marcos documentados**, não de observações anuais completas. O estudo de Oliveira et al. (2019) reconstrói a trajetória brasileira a partir de dados do e-MEC até agosto de 2018; fontes norte-americanas usam categorias históricas diferentes e a AAMC contemporânea conta programas MD, enquanto a AACOM conta colégios e locais de ensino DO.
+A série histórica atualmente publicada é de **marcos documentados**, não de observações anuais completas. A edição de 2026 de Barzansky e Walker atualiza a série norte-americana MD para 2023–24 (156), 2024–25 (157) e 2025–26 (158); esses valores foram incorporados à base. A contagem AAMC de 160 no FY2025 abrange programas com acreditação preliminar, provisória ou plena e permanece separada. A contagem brasileira de 494 escolas em 2025 é uma estimativa divulgada pela FMUSP a partir de dados da SERES/MEC obtidos via LAI, não uma série longitudinal anual. O estudo de Oliveira et al. (2019) reconstrói a trajetória brasileira a partir de dados do e-MEC até agosto de 2018; fontes norte-americanas usam categorias históricas diferentes e a AAMC contemporânea conta programas MD, enquanto a AACOM conta colégios e locais de ensino DO.
 
 ## Regras de comparação
 
@@ -15,6 +15,8 @@ A série histórica atualmente publicada é de **marcos documentados**, não de 
 5. Uma linha entre pontos no gráfico serve apenas como guia visual; não comprova a contagem nos anos intermediários.
 6. Para construir a série anual completa, criar uma base por instituição com nome histórico, diploma concedido, ano de início das atividades, encerramento, fusão, mudança de nome, status anual e fonte primária. Documentar casos incertos e mudanças de definição.
 7. Para alegações causais, testar explicações concorrentes: legislação, financiamento, setor público/privado, população, distribuição geográfica, capacidade de hospitais e campos clínicos, além de mudanças na demanda por médicos.
+8. Manter uma URL direta para cada observação sempre que a fonte for identificável. Se o documento primário exato não foi localizado, deixar a URL vazia e registrar a pendência em docs/AUDITORIA_FONTES_E_SERIE.md; não substituir uma fonte específica por um link genérico e apresentá-lo como comprovação.
+9. Para séries por ano acadêmico, preencher academic_year e conservar esse recorte ao descrever o dado. Não comparar diretamente contagens anuais com um número de programas cobertos por um levantamento financeiro de exercício fiscal sem explicar a diferença de escopo.
 
 ## Citações e referências ABNT
 
