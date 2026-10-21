@@ -30,7 +30,7 @@ ASSOCIATION OF AMERICAN MEDICAL COLLEGES (AAMC). *U.S. Medical School Revenues*.
 
 ASSOCIATION OF AMERICAN OSTEOPATHIC COLLEGES (AACOM). *U.S. Colleges of Osteopathic Medicine*. [S. l.], [s. d.]. Disponível em: https://www.aacom.org/become-a-doctor/prepare-for-medical-school/us-colleges-of-osteopathic-medicine. Acesso em: 20 out. 2026.
 
-BARZANSKY, Barbara. Abraham Flexner and the era of medical education reform. *Academic Medicine*, v. 85, supl. 1, p. S19-S25, 2010. DOI: https://doi.org/10.1097/ACM.0b013e3181c885. Disponível em: https://pubmed.ncbi.nlm.nih.gov/20736546/. Acesso em: 20 out. 2026.
+BARZANSKY, Barbara. Abraham Flexner and the era of medical education reform. *Academic Medicine*, v. 85, supl. 1, p. S19-S25, 2010. DOI: https://doi.org/10.1097/ACM.0b013e3181f12bd1. Disponível em: https://pubmed.ncbi.nlm.nih.gov/20736546/. Acesso em: 20 out. 2026.
 
 BRASIL. *Lei nº 12.871, de 22 de outubro de 2013*. Institui o Programa Mais Médicos e dá outras providências. Brasília, DF: Presidência da República, 2013. Disponível em: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12871.htm. Acesso em: 20 out. 2026.
 
