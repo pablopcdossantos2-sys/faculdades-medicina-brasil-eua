@@ -27,6 +27,12 @@ O arquivo de dados inclui os campos source_url e source_accessed_on. Links diret
 - **A série norte-americana por ano acadêmico** pode ter ano inicial diferente do ano civil que a representa na coluna year; a coluna academic_year registra esse recorte.
 - **Brasil 2025 (494)** e **EUA MD 2025–2026 (158)** são referências recentes, mas não representam unidades perfeitamente equivalentes.
 
+## Verificações estruturais realizadas
+
+- Conferi os sete arquivos HTML do site e não encontrei destinos locais de links ou recursos ausentes.
+- O CSV contém 44 registros, cabeçalho com 11 campos e número consistente de campos por linha.
+- A validação de links e do CSV foi realizada sobre os arquivos do repositório. A execução bem-sucedida do GitHub Actions ainda não foi confirmada; o status de verificações retornado pelo GitHub não apresentou checks associados ao commit consultado.
+
 ## Pendências de pesquisa — não ocultadas
 
 1. Localizar a tabela primária exata que sustenta os benchmarks norte-americanos de 1930–1970; até lá, as URLs diretas dessas linhas permanecem em branco.
