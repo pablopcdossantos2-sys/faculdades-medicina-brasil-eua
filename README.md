@@ -9,7 +9,8 @@ Projeto de pesquisa comparativa sobre a evolução da oferta de escolas médicas
 
 ## Navegação
 - [Página inicial](index.html)
-- [Evolução histórica, gráfico e tabela de marcos documentados](evolucao.html)
+- [Evolução histórica e gráfico](evolucao.html)
+- [Tabela anual 1900–2025](serie-anual.html)
 - [Como abrir uma escola: Brasil e EUA](criterios.html)
 - [Metodologia e referências](docs/METODOLOGIA.md)
 
