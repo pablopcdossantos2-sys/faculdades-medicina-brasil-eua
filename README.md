@@ -14,12 +14,13 @@ Projeto de pesquisa comparativa sobre a evolução da oferta de escolas médicas
 - [Como abrir uma escola: Brasil e EUA](criterios.html)
 - [Fatores que influenciam a expansão](fatores.html)
 - [Metodologia e referências](docs/METODOLOGIA.md)
+- [Auditoria de fontes e série histórica](docs/AUDITORIA_FONTES_E_SERIE.md)
 
 ## Política de evidências
 As páginas citam fontes no texto pelo sistema autor-data e devem oferecer referências verificáveis. A série histórica distingue contagens publicadas de aproximações. Não há uma série anual exata e harmonizada para cada ano de 1900 ao presente nos materiais históricos identificados. Por isso, o gráfico exibe marcos documentados, sem inventar valores anuais. Lacunas não devem ser preenchidas por interpolação apresentada como observação.
 
 ## Análise dos fatores de expansão
-A nova página [Fatores que influenciam a abertura de escolas médicas](fatores.html) organiza mecanismos a investigar no Brasil e nos EUA: regulação, campos clínicos, financiamento, acreditação, residência, capital privado e avaliação. As sínteses são pontos de partida; afirmações específicas devem ser conferidas em documentos primários vigentes, especialmente quando se referirem a políticas ou projetos legislativos de 2026.
+A página [Fatores que influenciam a abertura de escolas médicas](fatores.html) organiza mecanismos a investigar no Brasil e nos EUA. A auditoria de outubro de 2026 atualizou a série MD dos EUA com dados JAMA para 2023–24, 2024–25 e 2025–26; separou a contagem AAMC de 160 programas em diferentes estágios de acreditação; confirmou a origem do marco FMUSP de 2025; e corrigiu o escopo atribuído à Portaria SERES/MEC nº 531/2023. Consulte [docs/AUDITORIA_FONTES_E_SERIE.md](docs/AUDITORIA_FONTES_E_SERIE.md) para fontes e pendências.
 
 ## Validação automática
 O workflow [Validar dados e páginas](.github/workflows/validate-site.yml) executa verificações básicas a cada push e pull request: leitura de HTML, existência de destinos de links locais e verificações elementares de arquivos CSV. Ele não substitui revisão acadêmica, validação semântica dos dados ou checagem de disponibilidade de links externos.
