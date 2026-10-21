@@ -1,5 +1,5 @@
 country,year,academic_year,count,unit,scope,source_key,confidence,notes
-Brazil,1900,,3,schools,Medicine,"Oliveira et al. 2019",historical benchmark,"Paper states there were only three institutions by the first decade of the 20th century; 1900 is a proxy marker, not a verified census on 31 December 1900."
+Brazil,1910,,3,schools,Medicine,"Oliveira et al. 2019",historical benchmark,"Paper states there were only three institutions by the first decade of the 20th century; this is a period marker, not a verified census on 31 December 1910."
 Brazil,1949,,13,schools,Medicine,"Oliveira et al. 2019",historical benchmark,"Article states 13 schools by the end of the 1940s."
 Brazil,1959,,27,schools,Medicine,"Oliveira et al. 2019",derived from decade totals,"13 at end of 1940s plus 14 new courses in the 1950s; assumes no closures in interval; use as approximate benchmark, not exact year-end census."
 Brazil,1969,,68,schools,Medicine,"Oliveira et al. 2019",derived from decade totals,"27 plus 41 courses created in the 1960s; article reports 41 in the decade; approximation assumes no closures."
